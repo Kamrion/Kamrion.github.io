@@ -451,7 +451,7 @@
 		var toppper = ((hoursnow - 10) * 100) + (100 / 60 * minutesnow)
 		console.log(toppper)
 		if (document.getElementById("timelinenow") != null) {
-			document.getElementById("timelinenow").style.top = topper + "px";
+			document.getElementById("timelinenow").style.top = floor(topper) + "px";
 		}
 	}, 1000);
 
