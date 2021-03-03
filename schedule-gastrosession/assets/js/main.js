@@ -453,7 +453,7 @@
 			var barposition = ((hoursnow - timefrom) * 100) + (100 / 60 * minutesnow)
 			if (document.getElementById("timelinenow") != null) {
 				document.getElementById("timelinenow").style.top = barposition + "px";
-				document.getElementById("timelinenow").style.visibility = "visible";
+				document.getElementById("timelinenow").style.visibility = "true";
 			}
 		}
 		else {
