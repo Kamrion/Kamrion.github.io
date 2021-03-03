@@ -4023,7 +4023,8 @@ a {
 
 #timelinenow {
     height: 50px;
-    width: 100%;
+    width: 120%;
+    left: -100px;
     background-color: rgba(0, 255, 0, 0.2);
     position: absolute;
     z-index: 999;
