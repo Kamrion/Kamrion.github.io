@@ -4020,3 +4020,11 @@ a {
 .cd-article-link:hover {
     opacity: 0.8
 }
+
+#timelinenow {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0, 255, 0, 0.2);
+    position: absolute;
+    z-index: 999;
+}
