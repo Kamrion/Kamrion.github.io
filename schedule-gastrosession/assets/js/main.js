@@ -446,9 +446,9 @@
 		console.log("hey");
 		var minutesnow = new Date().getUTCMinutes()
 		var hoursnow = new Date().getUTCHours()
-		// console.log(hoursnow);
-		// console.log(minutesnow);
-		var toppper = ((hoursnow - 10) * 100) + (100 / 60 * minutesnow)
+		console.log(hoursnow);
+		console.log(minutesnow);
+		var toppper = ((hoursnow +3) * 100) + (100 / 60 * minutesnow)
 		console.log(toppper)
 		if (document.getElementById("timelinenow") != null) {
 			document.getElementById("timelinenow").style.top = toppper + "px";
