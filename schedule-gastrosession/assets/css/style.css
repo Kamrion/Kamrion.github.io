@@ -3680,7 +3680,7 @@ a {
 @media (min-width: 64rem) {
     .cd-schedule__name, .cd-schedule-modal__name {
         font-size: 1em;
-        font-size: calc(var(--text-sm)*1.2)
+        font-size: calc(var(--text-sm)*1.05)
     }
 }
 
@@ -4031,4 +4031,3 @@ a {
     z-index: 999;
     clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 2% 50%, 0% 0%);
 }
-
