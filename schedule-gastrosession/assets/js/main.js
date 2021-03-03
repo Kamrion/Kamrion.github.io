@@ -375,7 +375,7 @@
 		document.getElementById("not_correct-1-1").style.height = "200px";
 	}
 	if (document.getElementById("not_correct-2") != null) {
-		document.getElementById("not_correct-2").style.height = "160px";
+		document.getElementById("not_correct-2").style.height = "110px";
 	}
 	if (document.getElementById("not_correct-3") != null) {
 		document.getElementById("not_correct-3").style.height = "170px";
