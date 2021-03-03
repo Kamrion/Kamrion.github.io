@@ -441,18 +441,34 @@
 		document.getElementById("not_correct-19").style.top = "1984px";
 		document.getElementById("not_correct-19").style.height = "80px";
 	}
+	var testmode = false;
 
 	setInterval(function () {
-		console.log("hey");
 		var minutesnow = new Date().getUTCMinutes()
-		var hoursnow = new Date().getUTCHours()
-		console.log(hoursnow);
-		console.log(minutesnow);
-		var toppper = ((hoursnow +3) * 100) + (100 / 60 * minutesnow)
-		console.log(toppper)
-		if (document.getElementById("timelinenow") != null) {
-			document.getElementById("timelinenow").style.top = toppper + "px";
+		var hoursnow = new Date().getUTCHours() + 3 // hours in MSK(GMT+3)
+		var timefrom = 8;
+		var timeto = 19;
+
+		if (hoursnow >= timefrom && hoursnow <= timeto) {
+			var barposition = ((hoursnow - timefrom) * 100) + (100 / 60 * minutesnow)
+			if (document.getElementById("timelinenow") != null) {
+				document.getElementById("timelinenow").style.top = barposition + "px";
+				document.getElementById("timelinenow").style.visibility = "visible";
+			}
 		}
+		else {
+			if (document.getElementById("timelinenow") != null) {
+				document.getElementById("timelinenow").style.visibility = "hidden";
+			}
+		}
+
+		if (testmode) {
+			console.log("hey");
+			console.log(moscowtime);
+			console.log(minutesnow);
+			console.log(barposition)
+		}
+
 	}, 1000);
 
 
