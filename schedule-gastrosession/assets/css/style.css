@@ -4025,7 +4025,10 @@ a {
     height: 50px;
     width: 120%;
     left: -100px;
+    border: 2px solid rgba(0, 255, 0, 0.5);
     background-color: rgba(0, 255, 0, 0.2);
     position: absolute;
     z-index: 999;
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 2% 50%, 0% 0%);
 }
+
