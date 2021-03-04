@@ -45,7 +45,7 @@
 		} else if (mq == 'mobile' && loaded) {
 			//in this case you are on a mobile version (first load or resize from desktop)
 			Util.removeClass(this.element, 'cd-schedule--loading js-schedule-loaded');
-			this.resetEventsStyle();
+			this.resetEventsStyle();~~
 			modalOpen && this.checkEventModal();
 		} else if (mq == 'desktop' && modalOpen) {
 			//on a mobile version with modal open - need to resize/move modal window
@@ -450,7 +450,7 @@
 		var timeto = 19;
 
 		if (hoursnow >= timefrom && hoursnow <= timeto) {
-			var barposition = ((hoursnow - timefrom) * 100) + (100 / 60 * minutesnow)
+			var barposition = ((hoursnow - timefrom) * 100) + (100 / 60 * minutesnow)+100;
 			if (document.getElementById("timelinenow") != null) {
 				document.getElementById("timelinenow").style.top = barposition + "px";
 				document.getElementById("timelinenow").style.visibility = "visible";
