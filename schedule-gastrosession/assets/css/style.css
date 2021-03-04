@@ -3680,7 +3680,7 @@ a {
 @media (min-width: 64rem) {
     .cd-schedule__name, .cd-schedule-modal__name {
         font-size: 1em;
-        font-size: calc(var(--text-sm)*1.05)
+        font-size: calc(var(--text-sm)*1.0)
     }
 }
 
