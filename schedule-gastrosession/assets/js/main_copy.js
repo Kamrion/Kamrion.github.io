@@ -384,8 +384,8 @@
 			document.getElementById("not_correct-3").style.height = "250px";
 		}
 		if (document.getElementById("not_correct-4") != null) {
-			document.getElementById("not_correct-4").style.height = "160px";
-			document.getElementById("not_correct-4").style.top = "900px";
+			document.getElementById("not_correct-4").style.height = "150px";
+			document.getElementById("not_correct-4").style.top = "920px";
 		}
 		if (document.getElementById("not_correct-5") != null) {
 			document.getElementById("not_correct-5").style.height = "250px";
@@ -462,6 +462,13 @@
 		}
 		if (document.getElementById("not_correct-24") != null) {
 			document.getElementById("not_correct-24").style.height = "185px";
+		}
+		if (document.getElementById("not_correct-25") != null) {
+			document.getElementById("not_correct-25").style.top = "1075px";
+			document.getElementById("not_correct-25").style.height = "240px";
+		}
+		if (document.getElementById("not_correct-26") != null) {
+			document.getElementById("not_correct-26").style.height = "220px";
 		}
 	};
 	var testmode = false;
