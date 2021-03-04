@@ -450,7 +450,7 @@
 		var timeto = 19;
 
 		if (hoursnow >= timefrom && hoursnow <= timeto) {
-			var barposition = ((hoursnow - timefrom) * 100) + (100 / 60 * minutesnow)+100;
+			var barposition = ((hoursnow - timefrom) * 200) + (200 / 60 * minutesnow)+100;
 			if (document.getElementById("timelinenow") != null) {
 				document.getElementById("timelinenow").style.top = barposition + "px";
 				document.getElementById("timelinenow").style.visibility = "visible";
