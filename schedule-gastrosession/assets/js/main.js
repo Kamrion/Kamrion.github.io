@@ -45,7 +45,7 @@
 		} else if (mq == 'mobile' && loaded) {
 			//in this case you are on a mobile version (first load or resize from desktop)
 			Util.removeClass(this.element, 'cd-schedule--loading js-schedule-loaded');
-			this.resetEventsStyle();~~
+			this.resetEventsStyle(); ~~
 				modalOpen && this.checkEventModal();
 		} else if (mq == 'desktop' && modalOpen) {
 			//on a mobile version with modal open - need to resize/move modal window
@@ -443,6 +443,10 @@
 		if (document.getElementById("not_correct-19") != null) {
 			document.getElementById("not_correct-19").style.top = "1984px";
 			document.getElementById("not_correct-19").style.height = "80px";
+		}
+		if (document.getElementById("not_correct-20") != null) {
+			document.getElementById("not_correct-20").style.top = "1725px";
+			document.getElementById("not_correct-20").style.height = "275px";
 		}
 	};
 	var testmode = false;
