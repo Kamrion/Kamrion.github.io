@@ -468,7 +468,7 @@
 			console.log(minutesnow);
 			console.log(barposition)
 		}
-
+		scheduleTemplateArray[0].initSchedule();
 	}, 1000);
 
 
