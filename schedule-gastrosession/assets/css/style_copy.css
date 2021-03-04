@@ -86,7 +86,7 @@ img, video, svg {
     --space-xxxs: calc(0.25*var(--space-unit));
     --space-xxs: calc(0.375*var(--space-unit));
     --space-xs: calc(0.5*var(--space-unit));
-    --space-sm: calc(0.75*var(--space-unit));
+    --space-sm: calc(0.65*var(--space-unit));
     --space-md: calc(1.25*var(--space-unit));
     --space-lg: calc(2*var(--space-unit));
     --space-xl: calc(3.25*var(--space-unit));
@@ -3693,7 +3693,7 @@ a {
 @media (min-width: 40rem) {
     .cd-schedule-modal__date, .cd-schedule__event a::before {
         font-size: 0.72916em;
-        font-size: calc(var(--text-xs)*1.5);
+        font-size: calc(var(--text-xs)*1.4);
         margin-bottom: 0.125em;
         margin-bottom: var(--space-xxxxs)
     }

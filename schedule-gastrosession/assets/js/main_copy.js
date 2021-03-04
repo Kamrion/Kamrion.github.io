@@ -449,8 +449,8 @@
 			document.getElementById("not_correct-20").style.height = "240px";
 		}
 		if (document.getElementById("not_correct-21") != null) {
-			document.getElementById("not_correct-21").style.top = "1750px";
-			document.getElementById("not_correct-21").style.height = "250px";
+			document.getElementById("not_correct-21").style.top = "1765px";
+			document.getElementById("not_correct-21").style.height = "235px";
 		}
 		if (document.getElementById("not_correct-22") != null) {
 			document.getElementById("not_correct-22").style.top = "1363px";
