@@ -461,7 +461,7 @@
 			document.getElementById("not_correct-23").style.height = "240px";
 		}
 		if (document.getElementById("not_correct-24") != null) {
-			document.getElementById("not_correct-24").style.height = "210px";
+			document.getElementById("not_correct-24").style.height = "185px";
 		}
 	};
 	var testmode = false;
