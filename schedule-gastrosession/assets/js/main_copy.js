@@ -45,8 +45,8 @@
 		} else if (mq == 'mobile' && loaded) {
 			//in this case you are on a mobile version (first load or resize from desktop)
 			Util.removeClass(this.element, 'cd-schedule--loading js-schedule-loaded');
-			this.resetEventsStyle();~~
-			modalOpen && this.checkEventModal();
+			this.resetEventsStyle(); ~~
+				modalOpen && this.checkEventModal();
 		} else if (mq == 'desktop' && modalOpen) {
 			//on a mobile version with modal open - need to resize/move modal window
 			this.checkEventModal(modalOpen);
@@ -344,13 +344,13 @@
 			})(i);
 		}
 
-		// window.addEventListener('resize', function (event) {
-		// 	// on resize - update events position and modal position (if open)
-		// 	if (!resizing) {
-		// 		resizing = true;
-		// 		(!window.requestAnimationFrame) ? setTimeout(checkResize, 250) : window.requestAnimationFrame(checkResize);
-		// 	}
-		// });
+		window.addEventListener('resize', function (event) {
+			// on resize - update events position and modal position (if open)
+			if (!resizing) {
+				resizing = true;
+				(!window.requestAnimationFrame) ? setTimeout(checkResize, 250) : window.requestAnimationFrame(checkResize);
+			}
+		});
 
 		window.addEventListener('keyup', function (event) {
 			// close event modal when pressing escape key
@@ -361,12 +361,12 @@
 			}
 		});
 
-		// function checkResize() {
-		// 	for (var i = 0; i < scheduleTemplateArray.length; i++) {
-		// 		scheduleTemplateArray[i].scheduleReset();
-		// 	}
-		// 	resizing = false;
-		// };
+		function checkResize() {
+			for (var i = 0; i < scheduleTemplateArray.length; i++) {
+				scheduleTemplateArray[i].scheduleReset();
+			}
+			resizing = false;
+		};
 	}
 	if (document.getElementById("not_correct-1") != null) {
 		document.getElementById("not_correct-1").style.height = "160px";
@@ -450,7 +450,7 @@
 		var timeto = 19;
 
 		if (hoursnow >= timefrom && hoursnow <= timeto) {
-			var barposition = ((hoursnow - timefrom) * 200) + (200 / 60 * minutesnow)+100;
+			var barposition = ((hoursnow - timefrom) * 200) + (200 / 60 * minutesnow) + 100;
 			if (document.getElementById("timelinenow") != null) {
 				document.getElementById("timelinenow").style.top = barposition + "px";
 				document.getElementById("timelinenow").style.visibility = "visible";
