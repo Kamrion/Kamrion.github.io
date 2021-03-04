@@ -46,7 +46,7 @@
 			//in this case you are on a mobile version (first load or resize from desktop)
 			Util.removeClass(this.element, 'cd-schedule--loading js-schedule-loaded');
 			this.resetEventsStyle();~~
-			modalOpen && this.checkEventModal();
+				modalOpen && this.checkEventModal();
 		} else if (mq == 'desktop' && modalOpen) {
 			//on a mobile version with modal open - need to resize/move modal window
 			this.checkEventModal(modalOpen);
@@ -344,13 +344,13 @@
 			})(i);
 		}
 
-		// window.addEventListener('resize', function (event) {
-		// 	// on resize - update events position and modal position (if open)
-		// 	if (!resizing) {
-		// 		resizing = true;
-		// 		(!window.requestAnimationFrame) ? setTimeout(checkResize, 250) : window.requestAnimationFrame(checkResize);
-		// 	}
-		// });
+		window.addEventListener('resize', function (event) {
+			// on resize - update events position and modal position (if open)
+			if (!resizing) {
+				resizing = true;
+				(!window.requestAnimationFrame) ? setTimeout(checkResize, 250) : window.requestAnimationFrame(checkResize);
+			}
+		});
 
 		window.addEventListener('keyup', function (event) {
 			// close event modal when pressing escape key
@@ -361,86 +361,90 @@
 			}
 		});
 
-		// function checkResize() {
-		// 	for (var i = 0; i < scheduleTemplateArray.length; i++) {
-		// 		scheduleTemplateArray[i].scheduleReset();
-		// 	}
-		// 	resizing = false;
-		// };
+		function checkResize() {
+			for (var i = 0; i < scheduleTemplateArray.length; i++) {
+				scheduleTemplateArray[i].scheduleReset();
+			}
+			resizing = false;
+		};
 	}
-	if (document.getElementById("not_correct-1") != null) {
-		document.getElementById("not_correct-1").style.height = "160px";
-	}
-	if (document.getElementById("not_correct-1-1") != null) {
-		document.getElementById("not_correct-1-1").style.height = "200px";
-	}
-	if (document.getElementById("not_correct-2") != null) {
-		document.getElementById("not_correct-2").style.height = "110px";
-	}
-	if (document.getElementById("not_correct-3") != null) {
-		document.getElementById("not_correct-3").style.height = "170px";
-	}
-	if (document.getElementById("not_correct-4") != null) {
-		document.getElementById("not_correct-4").style.height = "160px";
-		document.getElementById("not_correct-4").style.top = "900px";
-	}
-	if (document.getElementById("not_correct-5") != null) {
-		document.getElementById("not_correct-5").style.height = "200px";
-	}
-	if (document.getElementById("not_correct-6") != null) {
-		document.getElementById("not_correct-6").style.height = "160px";
-	}
-	if (document.getElementById("not_correct-7") != null) {
-		document.getElementById("not_correct-7").style.height = "190px";
-	}
-	if (document.getElementById("not_correct-8") != null) {
-		document.getElementById("not_correct-8").style.top = "1510px";
-		document.getElementById("not_correct-8").style.height = "190px";
-	}
-	if (document.getElementById("not_correct-9") != null) {
-		document.getElementById("not_correct-9").style.top = "60px";
-		document.getElementById("not_correct-9").style.height = "75px";
-	}
-	if (document.getElementById("not_correct-10") != null) {
-		document.getElementById("not_correct-10").style.top = "586px";
-		document.getElementById("not_correct-10").style.height = "80px";
-	}
-	if (document.getElementById("not_correct-11") != null) {
-		document.getElementById("not_correct-11").style.top = "1431px";
-		document.getElementById("not_correct-11").style.height = "80px";
-	}
-	if (document.getElementById("not_correct-12") != null) {
-		document.getElementById("not_correct-12").style.top = "1510px";
-		document.getElementById("not_correct-12").style.height = "80px";
-	}
-	if (document.getElementById("not_correct-13") != null) {
-		document.getElementById("not_correct-13").style.top = "1588px";
-		document.getElementById("not_correct-13").style.height = "80px";
-	}
-	if (document.getElementById("not_correct-14") != null) {
-		document.getElementById("not_correct-14").style.top = "1668px";
-		document.getElementById("not_correct-14").style.height = "80px";
-	}
-	if (document.getElementById("not_correct-15") != null) {
-		document.getElementById("not_correct-15").style.top = "1747px";
-		document.getElementById("not_correct-15").style.height = "80px";
-	}
-	if (document.getElementById("not_correct-16") != null) {
-		document.getElementById("not_correct-16").style.top = "1749px";
-		document.getElementById("not_correct-16").style.height = "80px";
-	}
-	if (document.getElementById("not_correct-17") != null) {
-		document.getElementById("not_correct-17").style.top = "1827px";
-		document.getElementById("not_correct-17").style.height = "80px";
-	}
-	if (document.getElementById("not_correct-18") != null) {
-		document.getElementById("not_correct-18").style.top = "1906px";
-		document.getElementById("not_correct-18").style.height = "80px";
-	}
-	if (document.getElementById("not_correct-19") != null) {
-		document.getElementById("not_correct-19").style.top = "1984px";
-		document.getElementById("not_correct-19").style.height = "80px";
-	}
+	function customResize() {
+
+
+		if (document.getElementById("not_correct-1") != null) {
+			document.getElementById("not_correct-1").style.height = "160px";
+		}
+		if (document.getElementById("not_correct-1-1") != null) {
+			document.getElementById("not_correct-1-1").style.height = "200px";
+		}
+		if (document.getElementById("not_correct-2") != null) {
+			document.getElementById("not_correct-2").style.height = "110px";
+		}
+		if (document.getElementById("not_correct-3") != null) {
+			document.getElementById("not_correct-3").style.height = "170px";
+		}
+		if (document.getElementById("not_correct-4") != null) {
+			document.getElementById("not_correct-4").style.height = "160px";
+			document.getElementById("not_correct-4").style.top = "900px";
+		}
+		if (document.getElementById("not_correct-5") != null) {
+			document.getElementById("not_correct-5").style.height = "200px";
+		}
+		if (document.getElementById("not_correct-6") != null) {
+			document.getElementById("not_correct-6").style.height = "160px";
+		}
+		if (document.getElementById("not_correct-7") != null) {
+			document.getElementById("not_correct-7").style.height = "190px";
+		}
+		if (document.getElementById("not_correct-8") != null) {
+			document.getElementById("not_correct-8").style.top = "1510px";
+			document.getElementById("not_correct-8").style.height = "190px";
+		}
+		if (document.getElementById("not_correct-9") != null) {
+			document.getElementById("not_correct-9").style.top = "60px";
+			document.getElementById("not_correct-9").style.height = "75px";
+		}
+		if (document.getElementById("not_correct-10") != null) {
+			document.getElementById("not_correct-10").style.top = "586px";
+			document.getElementById("not_correct-10").style.height = "80px";
+		}
+		if (document.getElementById("not_correct-11") != null) {
+			document.getElementById("not_correct-11").style.top = "1431px";
+			document.getElementById("not_correct-11").style.height = "80px";
+		}
+		if (document.getElementById("not_correct-12") != null) {
+			document.getElementById("not_correct-12").style.top = "1510px";
+			document.getElementById("not_correct-12").style.height = "80px";
+		}
+		if (document.getElementById("not_correct-13") != null) {
+			document.getElementById("not_correct-13").style.top = "1588px";
+			document.getElementById("not_correct-13").style.height = "80px";
+		}
+		if (document.getElementById("not_correct-14") != null) {
+			document.getElementById("not_correct-14").style.top = "1668px";
+			document.getElementById("not_correct-14").style.height = "80px";
+		}
+		if (document.getElementById("not_correct-15") != null) {
+			document.getElementById("not_correct-15").style.top = "1747px";
+			document.getElementById("not_correct-15").style.height = "80px";
+		}
+		if (document.getElementById("not_correct-16") != null) {
+			document.getElementById("not_correct-16").style.top = "1749px";
+			document.getElementById("not_correct-16").style.height = "80px";
+		}
+		if (document.getElementById("not_correct-17") != null) {
+			document.getElementById("not_correct-17").style.top = "1827px";
+			document.getElementById("not_correct-17").style.height = "80px";
+		}
+		if (document.getElementById("not_correct-18") != null) {
+			document.getElementById("not_correct-18").style.top = "1906px";
+			document.getElementById("not_correct-18").style.height = "80px";
+		}
+		if (document.getElementById("not_correct-19") != null) {
+			document.getElementById("not_correct-19").style.top = "1984px";
+			document.getElementById("not_correct-19").style.height = "80px";
+		}
+	};
 	var testmode = false;
 
 	setInterval(function () {
@@ -450,7 +454,7 @@
 		var timeto = 19;
 
 		if (hoursnow >= timefrom && hoursnow <= timeto) {
-			var barposition = ((hoursnow - timefrom) * 200) + (200 / 60 * minutesnow)+100;
+			var barposition = ((hoursnow - timefrom) * 200) + (200 / 60 * minutesnow) + 100;
 			if (document.getElementById("timelinenow") != null) {
 				document.getElementById("timelinenow").style.top = barposition + "px";
 				document.getElementById("timelinenow").style.visibility = "visible";
@@ -468,7 +472,8 @@
 			console.log(minutesnow);
 			console.log(barposition)
 		}
-
+		scheduleTemplateArray[0].initSchedule();
+		customResize();
 	}, 1000);
 
 
