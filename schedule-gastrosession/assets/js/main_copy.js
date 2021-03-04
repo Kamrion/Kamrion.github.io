@@ -381,24 +381,24 @@
 			document.getElementById("not_correct-2").style.height = "110px";
 		}
 		if (document.getElementById("not_correct-3") != null) {
-			document.getElementById("not_correct-3").style.height = "170px";
+			document.getElementById("not_correct-3").style.height = "250px";
 		}
 		if (document.getElementById("not_correct-4") != null) {
 			document.getElementById("not_correct-4").style.height = "160px";
 			document.getElementById("not_correct-4").style.top = "900px";
 		}
 		if (document.getElementById("not_correct-5") != null) {
-			document.getElementById("not_correct-5").style.height = "200px";
+			document.getElementById("not_correct-5").style.height = "250px";
 		}
 		if (document.getElementById("not_correct-6") != null) {
-			document.getElementById("not_correct-6").style.height = "160px";
+			document.getElementById("not_correct-6").style.height = "185px";
 		}
 		if (document.getElementById("not_correct-7") != null) {
-			document.getElementById("not_correct-7").style.height = "190px";
+			document.getElementById("not_correct-7").style.height = "213px";
 		}
 		if (document.getElementById("not_correct-8") != null) {
-			document.getElementById("not_correct-8").style.top = "1510px";
-			document.getElementById("not_correct-8").style.height = "190px";
+			document.getElementById("not_correct-8").style.top = "1550px";
+			document.getElementById("not_correct-8").style.height = "230px";
 		}
 		if (document.getElementById("not_correct-9") != null) {
 			document.getElementById("not_correct-9").style.top = "60px";
@@ -443,6 +443,25 @@
 		if (document.getElementById("not_correct-19") != null) {
 			document.getElementById("not_correct-19").style.top = "1984px";
 			document.getElementById("not_correct-19").style.height = "80px";
+		}
+		if (document.getElementById("not_correct-20") != null) {
+			document.getElementById("not_correct-20").style.top = "455px";
+			document.getElementById("not_correct-20").style.height = "240px";
+		}
+		if (document.getElementById("not_correct-21") != null) {
+			document.getElementById("not_correct-21").style.top = "1750px";
+			document.getElementById("not_correct-21").style.height = "250px";
+		}
+		if (document.getElementById("not_correct-22") != null) {
+			document.getElementById("not_correct-22").style.top = "1363px";
+			document.getElementById("not_correct-22").style.height = "180px";
+		}
+		if (document.getElementById("not_correct-23") != null) {
+			document.getElementById("not_correct-23").style.top = "650px";
+			document.getElementById("not_correct-23").style.height = "240px";
+		}
+		if (document.getElementById("not_correct-24") != null) {
+			document.getElementById("not_correct-24").style.height = "210px";
 		}
 	};
 	var testmode = false;
